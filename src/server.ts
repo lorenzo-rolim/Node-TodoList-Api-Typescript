@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(router);
 
-// Put your mongoDB connect string below
 mongoose
   .connect("")
 

@@ -3,7 +3,7 @@ import TodoModel from "../database/TodoModel";
 
 const TodoController = {
   async index(req: Request, res: Response): Promise<Response> {
-    let todos = await TodoModel.find();
+    let todos = await TodoModel.find().sort({ createdAt: -1 });
 
     return res.json(todos);
   },
